@@ -1,7 +1,7 @@
 const socket = io('http://localhost:8000');
 
 const tikSound = new Howl({
-    src : ['../music/tik.mp3']
+    src : ['/music/tik.mp3']
 });
 
 const form  = document.getElementById('send-container');
@@ -31,7 +31,7 @@ form.addEventListener('submit' , (e) => {
     if(message == ""){
         return;
     }
-    append(`You: ${message}` , 'right');
+    append(`${username}: ${message}` , 'right');
     socket.emit('send' , message);
     messageInput.value = '';
 });
