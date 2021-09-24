@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChitChat - Real time web App</title>
+    <script src="howler.js"></script>
+    <script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script defer src="js/client.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> -->
+  </head>
+  <body>
+    <div class="container" id = 'box'>
+    <button class="btnClr" type="button" onclick="clearBox('box')">Clear</button>
+        
+      <div class="message left">Suru: Hey how are you</div>
+      <div class="message mid">Rohan joined the chat</div>
+      <div class="message right">Rohan: Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+    </div>
+    <div class="send">
+      <form action="#" id="send-container">
+        <input
+          type="text"
+          name="messageInp"
+          id="messageInp"
+          placeholder="Type a message"
+          autocomplete="off"
+          autofocus
+        />
+        <button class="btn" type="submit">Send</button>
+        
+      </form>
+      <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script> -->
+    </div>
+  </body>
+</html>
